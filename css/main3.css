@@ -1,0 +1,146 @@
+/* Zmienne */
+html {
+  font-size: 10px;
+  box-sizing: border-box;
+  margin: 0rem;
+  padding: 0rem; }
+
+body {
+  font-family: "Rubik", sans-serif;
+  color: #2d3236; }
+
+h1 {
+  font-weight: 400;
+  font-size: 3.6rem; }
+
+h2 {
+  font-size: 2.8rem;
+  font-weight: 400; }
+
+h3 {
+  font-size: 1.8rem;
+  font-weight: 300; }
+
+header {
+  height: 8.5rem;
+  padding: 2rem 0rem; }
+
+.white-box {
+  background-color: white;
+  text-align: center;
+  padding: 3rem;
+  height: 22.5rem;
+  -webkit-overflow-scrolling: touch; }
+  .white-box h3 {
+    font-size: 1.9rem;
+    margin-bottom: 2rem;
+    font-weight: 400; }
+  .white-box p {
+    color: #808080;
+    font-size: 1.4rem;
+    line-height: 1.8; }
+
+.heading-container {
+  margin: 6rem 0rem 2.5rem 0rem; }
+  .heading-container h3 {
+    margin: 1rem 0rem 0rem 0rem;
+    font-weight: 200; }
+  .heading-container h2 {
+    margin: 4rem 0rem 0rem 0rem; }
+
+section {
+  text-align: center;
+  height: auto;
+  margin: 0rem;
+  padding-bottom: 2rem; }
+
+#blue {
+  background-color: #215398;
+  height: 47rem;
+  padding-bottom: 4rem; }
+  #blue .heading-container {
+    color: white; }
+
+#gray {
+  background-color: #f5f5f5; }
+  #gray .dot-container {
+    width: 100%;
+    height: 3rem;
+    text-align: center;
+    transform: translateY(-50%); }
+    #gray .dot-container .dot {
+      height: 3rem;
+      width: 3rem;
+      border-radius: 50%;
+      background-color: #ff3859;
+      display: inline-block; }
+
+.fixed {
+  margin: 0rem;
+  padding: 0rem; }
+
+.carousel {
+  overflow: hidden;
+  position: relative;
+  height: 25rem; }
+  .carousel .carousel-inner {
+    transition: 1s ease all;
+    float: left; }
+    .carousel .carousel-inner .item {
+      margin: 1rem 0rem; }
+
+.controlers-container {
+  position: relative;
+  width: 110%;
+  z-index: 9999; }
+  .controlers-container .controlers-desktop {
+    position: absolute;
+    width: 100%;
+    z-index: 9999;
+    left: -5rem;
+    transform: translateY(-13.75rem); }
+    .controlers-container .controlers-desktop .next, .controlers-container .controlers-desktop .prev {
+      cursor: pointer; }
+    .controlers-container .controlers-desktop .next {
+      float: left; }
+    .controlers-container .controlers-desktop .prev {
+      float: right; }
+
+.heading-container {
+  margin: 6rem 0rem 2.5rem 0rem; }
+  .heading-container h3 {
+    margin: 1rem 0rem 0rem 0rem;
+    font-weight: 200; }
+  .heading-container h2 {
+    margin: 4rem 0rem 0rem 0rem;
+    font-size: 2.4rem; }
+
+@media (min-width: 280px) and (max-width: 1024px) {
+  section {
+    padding-bottom: 3rem; }
+  .carousel {
+    height: 25rem; }
+    .carousel .carousel-inner .item {
+      margin: 1rem 0rem; }
+      .carousel .carousel-inner .item .white-box {
+        height: 22.5rem; }
+  .controlers-container {
+    position: relative;
+    width: 100%;
+    z-index: 9999; }
+    .controlers-container .controlers-desktop {
+      position: relative;
+      width: 100%;
+      z-index: 9999;
+      left: 0;
+      transform: translateY(0);
+      padding: 1rem 0rem; }
+      .controlers-container .controlers-desktop .next, .controlers-container .controlers-desktop .prev {
+        cursor: pointer; }
+      .controlers-container .controlers-desktop .next, .controlers-container .controlers-desktop .prev {
+        float: none;
+        display: inline-block;
+        margin: 0 4rem; }
+  .white-box {
+    height: 25rem;
+    margin-bottom: 1rem; } }
