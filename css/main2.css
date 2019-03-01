@@ -84,13 +84,19 @@ section {
   position: relative;
   height: 21rem;
   padding: 0% 2%; }
-  .carousel .carousel-inner {
+  .carousel > .carousel-inner {
     transition: 1s ease all;
-    float: left; }
-    .carousel .carousel-inner .item {
-      float: left;
+    float: left;
+    width: auto; }
+    .carousel > .carousel-inner .item {
+      display: inline-table;
       margin: 0rem 1.5rem;
-      width: 32rem; }
+      width: 32rem;
+      transition: 1s ease left; }
+    .carousel > .carousel-inner .active.left {
+      left: -32rem; }
+    .carousel > .carousel-inner .active.right {
+      left: 32rem; }
 
 .controlers-container {
   position: relative;
@@ -100,13 +106,12 @@ section {
     position: absolute;
     width: 100%;
     z-index: 9999;
-    left: -3rem;
     transform: translateY(-12rem); }
-    .controlers-container .controlers-desktop .next, .controlers-container .controlers-desktop .prev {
+    .controlers-container .controlers-desktop .left, .controlers-container .controlers-desktop .right {
       cursor: pointer; }
-    .controlers-container .controlers-desktop .next {
+    .controlers-container .controlers-desktop .left {
       float: left; }
-    .controlers-container .controlers-desktop .prev {
+    .controlers-container .controlers-desktop .right {
       float: right; }
 
 .controler-container-desktop {
@@ -137,6 +142,14 @@ section {
     font-weight: 200; }
   .heading-container h2 {
     margin: 4rem 0rem 0rem 0rem; }
+
+.moveLeft {
+  margin-left: -355px !important;
+  transition: 1s ease !important; }
+
+.moveRight {
+  margin-left: 355px !important;
+  transition: 1s ease !important; }
 
 @media (min-width: 569px) and (max-width: 1024px) {
   section {
