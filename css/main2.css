@@ -77,30 +77,55 @@ section {
   margin: 0rem;
   padding: 0rem; }
 
-.carousel {
-  float: left;
-  overflow: hidden;
-  width: 100%;
-  position: relative;
-  height: 21rem;
-  padding: 0% 2%; }
-  .carousel > .carousel-inner {
-    transition: 1s ease all;
-    float: left;
-    width: auto; }
-    .carousel > .carousel-inner .item {
-      display: inline-table;
-      margin: 0rem 1.5rem;
-      width: 32rem;
-      transition: 1s ease left; }
-    .carousel > .carousel-inner .active.left {
-      left: -32rem; }
-    .carousel > .carousel-inner .active.right {
-      left: 32rem; }
+@media (min-width: 728px) {
+  .carousel-inner .active,
+  .carousel-inner .active + .carousel-item,
+  .carousel-inner .active + .carousel-item + .carousel-item,
+  .carousel-inner .active + .carousel-item + .carousel-item + .carousel-item {
+    display: block; }
+  .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left),
+  .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item,
+  .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item + .carousel-item {
+    transition: none; }
+  .carousel-inner .carousel-item-next,
+  .carousel-inner .carousel-item-prev {
+    position: relative;
+    transform: translate3d(0, 0, 0); }
+  .carousel-inner .active.carousel-item + .carousel-item + .carousel-item + .carousel-item {
+    position: absolute;
+    top: 0;
+    right: -25%;
+    z-index: -1;
+    display: block;
+    visibility: visible; }
+  .active.carousel-item-left + .carousel-item-next.carousel-item-left,
+  .carousel-item-next.carousel-item.left + .carousel-item,
+  .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item,
+  .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item + .carousel-item {
+    position: relative;
+    transform: translate3d(-100%, 0, 0);
+    visibility: visible; }
+  .carousel-inner .carousel-item-prev .carousel-item-right {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    display: block;
+    visibility: visible; }
+  .active.carousel-item-right + .carousel-item-prev.carousel-item-right,
+  .carousel-item-prev.carousel-item-right + .carousel-item,
+  .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item,
+  .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item + .carousel-item {
+    position: relative;
+    transform: translate3d(100%, 0, 0);
+    visibility: visible;
+    display: block;
+    visibility: visible; } }
 
 .controlers-container {
   position: relative;
-  width: 100%;
+  width: 120%;
+  left: -12rem;
   z-index: 9999; }
   .controlers-container .controlers-desktop {
     position: absolute;
@@ -113,27 +138,6 @@ section {
       float: left; }
     .controlers-container .controlers-desktop .right {
       float: right; }
-
-.controler-container-desktop {
-  position: absolute;
-  z-index: 9999;
-  transform: translate(-6rem, 12rem);
-  width: 108%; }
-  .controler-container-desktop .control-next {
-    float: left;
-    cursor: pointer; }
-  .controler-container-desktop .control-prev {
-    float: right;
-    cursor: pointer; }
-
-.controler-container-mobile {
-  width: 100%;
-  display: none;
-  padding: 0rem 2rem; }
-  .controler-container-mobile .control-next {
-    float: left; }
-  .controler-container-mobile .control-prev {
-    float: right; }
 
 .heading-container {
   margin: 6rem 0rem 2.5rem 0rem; }
@@ -154,14 +158,6 @@ section {
 @media (min-width: 569px) and (max-width: 1024px) {
   section {
     padding: 2rem; }
-  .carousel {
-    padding: 1rem;
-    height: 25rem; }
-    .carousel .carousel-inner .item {
-      width: 47%;
-      margin: 1rem; }
-      .carousel .carousel-inner .item .white-box {
-        min-height: 21rem; }
   .white-box {
     min-height: 30.5rem; } }
 
@@ -170,12 +166,6 @@ section {
     padding: 1rem; }
   #blue {
     min-height: 55rem; }
-  .carousel {
-    padding: 1rem;
-    height: 25rem; }
-    .carousel .carousel-inner .item {
-      width: 100%;
-      margin: .5rem 0rem; }
   .white-box {
     margin-top: 1rem;
     min-height: 25rem; }

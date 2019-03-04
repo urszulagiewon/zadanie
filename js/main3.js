@@ -1,33 +1,26 @@
 $(function () {
 
-    function moveLeft() {
-        $('.item').each(function () {
-            $('.item').animate({
-                'margin-left': "-=340",
-                'margin-right': '+=340'
-            }, 1000);
-        })
-    };
+    $("#carousel").on('slide.bs.carousel', function(item){
+        let $item = $(item.relatedTarget);
+        let index = $item.index();
+        let itemsInCarousel = 3;
+        let allItems = $('.carousel-item').length;
 
-    function moveRight() {
-        $('.item').each(function () {
-            $('.item').animate({
-                'margin-right': '-=340',
-                'margin-left': '+=340'
-            }, 1000);
-        })
-    }
-
-
-
-    $(".left").on('click', function () {
-        moveLeft($('.item').eq(0));
+        if(index >= allItems-(itemsInCarousel-1)) {
+            let singleItem = itemsInCarousel - (allItems -index);
+            for (let i = 0; i < singleItem; i++) {
+                if (item.direction == 'left') {
+                    $('.carousel-item').eq(i).appendTo('.carousel-inner');
+                } else {
+                    $('.carousel-item').eq(0).appendTo('.carousel-inner')
+                }
+            }
+        }
     });
 
-    $('.right').on('click', function () {
-        moveRight($('.item:last'));
+    $("#carousel").carousel({
+        interval: 3000
     });
-
 
 
 });

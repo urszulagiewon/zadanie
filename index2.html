@@ -34,17 +34,18 @@
                     <h3>Lorem ipsum dolor sit amet, consect etur adipiscing elit.</h3>
                 </div>
             </div>
-            <div class="row align-items-center">
-                <div class="carousel" id="carousel">
-                    <div class="carousel-inner align-items-center">
-                        <div class="item" data-slide="1">
+        </div>
+        <div class="container">
+                <div class="carousel slide" id="carousel" data-ride='carousel' data-interval='7000'>
+                    <div class="carousel-inner row" role="listbox">
+                        <div class="carousel-item col-md-4 active">
                             <div class="white-box">
                                 <h3>Heading</h3>
                                 <p>Lorem ipsum dolor sit.</p>
                                 <img src="img/wordpress-icon.png" class="img-fluid">
                             </div>
                         </div>
-                        <div class="item" data-slide="2">
+                        <div class="carousel-item col-md-4 ">
                             <div class="white-box">
                                 <h3>Heading</h3>
                                 <p>Lorem ipsum dolor sit amet, consect etur adipiscing elit. Aenea uismod
@@ -52,7 +53,7 @@
                                     laoreet. Proin gravida dolor sit amet lacus.</p>
                             </div>
                         </div>
-                        <div class="item" data-slide="3">
+                        <div class="carousel-item col-md-4">
                             <div class="white-box">
                                 <h3>Ultra Mega Super Long Heading</h3>
                                 <p>Lorem ipsum dolor sit amet, consect etur adipiscing elit. Aenea uismod
@@ -60,7 +61,15 @@
                                     laoreet. Lorem ipsum dolor sit amet</p>
                             </div>
                         </div>
-                        <div class="item" data-slide="4"> 
+                        <div class="carousel-item col-md-4 "> 
+                            <div class="white-box">
+                                <h3>Heading</h3>
+                                <p>Lorem ipsum dolor sit amet, consect etur adipiscing elit. Aenea uismod
+                                    bibendum
+                                    laoreet. Proin gravida dolor sit amet lacus.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item col-md-4 "> 
                             <div class="white-box">
                                 <h3>Heading</h3>
                                 <p>Lorem ipsum dolor sit amet, consect etur adipiscing elit. Aenea uismod
@@ -69,12 +78,12 @@
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="controlers-container">
-                    <div class="controlers-desktop">
-                        <div class="left" data-slide="next"><img src="img/arrow-left.png"></div>
-                        <div class="right" data-slide="prev"><img src="img/arrow-right.png"></div>
-                        <div style="clear: both"></div>
+                    <div class="controlers-container">
+                        <div class="controlers-desktop">
+                            <div class="left" ><a class="carousel-control-prev" href="#carousel" data-slide="next"><img src="img/arrow-left.png"></a></div>
+                            <div class="right"><a class="carousel-control-next" href="#carousel" data-slide="prev"><img src="img/arrow-right.png"></a></div>
+                            <div style="clear: both"></div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -121,7 +130,6 @@
     <!-- scripts-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-    <script src="js/multislider.min.js"></script>
     <script src="js/main3.js"></script>
 </body>
 
